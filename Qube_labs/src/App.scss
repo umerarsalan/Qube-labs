@@ -38,7 +38,9 @@ body {
     @apply px-16;
   }
 }
-
+.z-custom-40 {
+z-index: 40;
+}
 .form-control {
   background: #f2f4f8;
   border: 1px solid #f2f4f8;
@@ -63,7 +65,32 @@ body {
 }
 
 // ===popup====
+.tooltip {
+  position: relative;
+  display: flex !important;
+  border-bottom: 1px dotted rgb(255, 255, 255) !important; /* If you want dots under the hoverable text */
+  opacity: 10 !important;
+}
 
+/* Tooltip text */
+.tooltip .tooltiptext {
+  // visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+display: block;
+}
 /* Popup style */
 .head-text {
   font-size: 12px;
@@ -88,6 +115,7 @@ body {
 .card-headnig img {
   width: 13px;
   height: 13px;
+  cursor: pointer;
 }
 .card-headnig {
   display: flex;
@@ -257,7 +285,7 @@ body {
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
+  
   width: 120px;
   background-color: black;
   color: #fff;
@@ -267,7 +295,7 @@ body {
   position: absolute;
   z-index: 1;
   bottom: 150%;
-  left: 50%;
+  left: 38%;
   margin-left: -60px;
 }
 
@@ -282,9 +310,7 @@ body {
   border-color: black transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+
 // ===popup :end===
 // ===text-card===
 .text-card {

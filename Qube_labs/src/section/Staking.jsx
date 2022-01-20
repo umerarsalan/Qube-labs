@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Popup from "./CustomPopup";
 
 // import car111 from "../assets/ast/car111.jpg";
@@ -18,38 +18,80 @@ import { anim, ScrollReveal } from "../container/ScrollReveal";
 
 export default function Staking() {
   const [ViewCards, setViewCards] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [tooltipText, settooltipText] = useState("");
+  const count = useRef(0);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    count.current = count.current + 1;
+    
+  }, []);
+
+ 
+
+  
+  const handleScroll = (e) =>  { 
+    // alert("Hello World");
+    setIsOpentest(false);
+    setIsOpen(false);
+  }
   // ==popup==
   const [isOpen, setIsOpen] = useState(false);
-  const [copySuccess, setCopySuccess] = useState("");
+  const [isOpentest, setIsOpentest] = useState(false);
+  const [copySuccess, setCopySuccess] = useState(false);
   const textAreaRef = useRef(null);
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
-  function copyToClipboard(e) {
-    textAreaRef.current.select();
-    document.execCommand("copy");
+  const togglePopupStake = () => {
+    setIsOpen(true);
+    // setIsOpentest(true);
+    console.log(isOpentest);
+    console.log(isOpen);
+  };
+  const togglePopupStakeClose = () => {
+    setIsOpen(false);
+    setIsOpentest(false);
+    setTimeout(TestFun(), 10000)
 
-    e.target.focus();
-    setCopySuccess("Copied!");
+  };
+  const copyToClipboard = (e) => {
+    // textAreaRef.current.select();
+    // document.execCommand("copy");
+
+    // e.target.focus();
+    // setCopySuccess("Copied!");
+    // alert("dd");
+ console.log(e.target.value);
+  }
+  function TestFun() {
+    setIsOpen(false);
+  }
+ const handleMouseIn = () => {
+//     this.setState({ hover: true })
+navigator.clipboard.writeText("certikvaloper1hdutpn340l29gwl3nyrkxwfdyu8q96zwpyxamn");
+//  alert("Copied to clipboard.")
+settooltipText(true);
+setTimeout(() => {settooltipText(false) }, 1000);
   }
 
   return (
-    <section id="staking" className=" overflow-x-clip">
-      <div className="sticky top-0 z-40 justify-center">
+    <section id="staking" className="">
         {isOpen && (
+      <div className={"sticky top-0 justify-center z-40"}>
           <Popup
             content={
               <>
-                <div classs="container p-5">
+                <div classs="container  p-5">
                   <div className="container">
                     <div className="row d-flex justify-content-center">
-                      <h1>{isOpen}</h1>
+                      <h1>{isOpentest}</h1>
                       <div className="col-12 col-md-6">
                         <div class="media custom-object d-flex">
                           <img alt="..." src={car1} className="img-object" />
                           <div class="media-body">
                             <h4 className="fantom-card">Fantom (FTM)</h4>
-                            <a href="https://www.w3docs.com/" target="_blank" className="p-card">
+                            <a href="https://fantom.foundation" target="_blank" className="p-card">
                               https://fantom.foundation <img src={externallink} alt="" />
                             </a>
                           </div>
@@ -73,8 +115,13 @@ export default function Staking() {
                     <div className="row"></div>
                     <div className="row row-wrapper">
                       <div className="col-12 col-md-6 order-1 order-md-0 ">
-                        <div className="card-headnig" onClick={copyToClipboard}>
-                          <h4>Operator Address</h4> <img src={contentCapy} alt="" />
+                      {/* <div class="tooltip">Hover over me
+                      <span class="tooltiptext">Tooltip text</span>
+                    </div> */}
+                        <div className="card-headnig tooltip" onClick={handleMouseIn}>
+                        
+                        {tooltipText ?   <span class="tooltiptext"> Text Copied ! </span> : "" }
+                             <h4>Operator Address</h4> <img src={contentCapy} alt="" /> 
                         </div>
                         <p
                           className="p-card-link"
@@ -145,11 +192,13 @@ export default function Staking() {
                 </div>
               </>
             }
-            handleClose={togglePopup}
-            handleCloseValue={"dddddddd"}
+            handleClose={togglePopupStakeClose}
+            handleCloseValue={isOpen}
+            handleCloseTest={isOpentest}
+     
           />
-        )}
       </div>
+        ) }
 
       <div className="container"></div>
       <div className="container-xxl relative">
@@ -186,9 +235,9 @@ export default function Staking() {
                       className="btn is-primary w-full mt-2 btn-top"
                       type="button"
                       value="Click to Open Popup"
-                      onClick={togglePopup}
+                      onClick={togglePopupStake}
                     >
-                      Stake
+                      Stake 
                     </button>
                   </div>
                 </ScrollReveal>

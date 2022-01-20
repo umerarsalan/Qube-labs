@@ -170,16 +170,16 @@ export default function Staking() {
             </div>
 
             <div class="row">
-              <div class=" stake-card-custom col-sm-2  mr-auto ml-auto">
+              <div class=" stake-card-custom col-sm-2 mr-auto ml-auto">
                 <ScrollReveal config={anim.animate8}>
                   <div className="stake-card">
-                    <div className="d-flex p-1 no-gutters mr-4 justify-center">
-                      <div className="col w-12 h-10 m-1 mr-5 flex items-center bg-white rounded-lg img-btm MR">
-                        <img alt="..." src={car1} />
-                      </div>
-                      <div className="col px-2 ml-5">
-                        <div className="head-text">Fantom (FTM)</div>
-                        <div className="font-bold text-2xl">15.00%</div>
+                    <div className="d-flex p-1 no-gutters justify-center">
+                      <div className="row justify-center">
+                        <img alt="..." src={car1} className="img111" />
+                        <div className="">
+                          <div className="head-text">Fantom (FTM)</div>
+                          <div className="font-bold font-bold-card">15.00%</div>
+                        </div>
                       </div>
                     </div>
                     <button
@@ -197,13 +197,12 @@ export default function Staking() {
                 <ScrollReveal config={anim.animate8}>
                   <div className="stake-card">
                     <div className="d-flex p-1 no-gutters justify-center">
-                      <div className="col w-12 h-10 m-1 mr-5 flex items-center bg-white rounded-lg">
-                        <img alt="..." src={car2} />
-                      </div>
-                      <div className="col px-2 ml-5">
-                        <div className="head-text">Polkadot (DOT)</div>
-
-                        <div className="font-bold text-2xl">15.00%</div>
+                      <div className="row justify-center">
+                        <img alt="..." src={car2} className="img111" />
+                        <div className="">
+                          <div className="head-text">Polkadot (DOT)</div>
+                          <div className="font-bold font-bold-card">15.00%</div>
+                        </div>
                       </div>
                     </div>
                     <button
@@ -221,13 +220,12 @@ export default function Staking() {
                 <ScrollReveal config={anim.animate8}>
                   <div className="stake-card">
                     <div className="d-flex p-1 no-gutters justify-center">
-                      <div className="col w-12 h-10 m-1 mr-5 flex items-center bg-white rounded-lg">
-                        <img alt="..." src={car3} />
-                      </div>
-                      <div className="col px-2 ml-5">
-                        <div className="head-text">Terra (LUNA)</div>
-
-                        <div className="font-bold text-2xl">15.00%</div>
+                      <div className="row justify-center">
+                        <img alt="..." src={car3} className="img111" />
+                        <div className="">
+                          <div className="head-text">Terra (LUNA)</div>
+                          <div className="font-bold font-bold-card">15.00%</div>
+                        </div>
                       </div>
                     </div>
                     <button
@@ -244,13 +242,13 @@ export default function Staking() {
               <div style={{ width: "14rem", padding: "12px" }} class="stake-card-custom  col-sm-2 ml-auto mr-auto ">
                 <ScrollReveal config={anim.animate8}>
                   <div className="stake-card">
-                    <div className="d-flex p-1 no-gutters  justify-center">
-                      <div className="col w-12 h-10 m-1 mr-5 flex items-center bg-white rounded-lg">
-                        <img alt="..." src={car4} />
-                      </div>
-                      <div className="col px-2 ml-5">
-                        <div className="head-text">Cosmos (ATOM)</div>
-                        <div className="font-bold text-2xl">15.00%</div>
+                    <div className="d-flex p-1 no-gutters justify-center">
+                      <div className="row justify-center">
+                        <img alt="..." src={car4} className="img111" />
+                        <div className="">
+                          <div className="head-text">Cosmos (ATOM)</div>
+                          <div className="font-bold font-bold-card">15.00%</div>
+                        </div>
                       </div>
                     </div>
                     <button
@@ -264,9 +262,10 @@ export default function Staking() {
                   </div>
                 </ScrollReveal>
               </div>
+
             </div>
 
-            <div style={{ marginTop: "40px" }}>
+            {/* <div style={{ marginTop: "40px" }}>
               <div class="row ">
                 <div style={{ width: "14rem", padding: "12px" }} class=" stake-card-custom col-sm-2 mr-auto ml-auto ">
                   <ScrollReveal config={anim.animate8}>
@@ -362,7 +361,7 @@ export default function Staking() {
                   </ScrollReveal>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="row no-gutters -ml-1 -mr-1">
               {/* <ScrollReveal config={anim.animate8}>
                 <div className="col w-full sm:w-6/12 md:w-3/12 py-1 sm:p-1">

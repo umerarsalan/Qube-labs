@@ -66,7 +66,16 @@ body {
 
 /* Popup style */
 .head-text {
-  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+.font-bold-card{
+  top: 0;
+  text-align: center;
+  font-size: 32px;
+  color: #1092B2;
 }
 .qustion-img-mobile {
   display: none;
@@ -178,6 +187,7 @@ body {
   box-shadow: 0 2px 2px 2px #fafafa;
 }
 .btn-top {
+  top: 50px;
   box-shadow: 0 2px 2px 2px #fafafa;
 }
 .img-btm {
@@ -200,22 +210,24 @@ body {
 .stake-card-custom {
   background-color: #f8fafd !important;
   padding: 10px;
+  height: px;
   width: 250px !important;
   border: 1px solid white;
   border-radius: 10px;
 }
+.img111{
+  height: 60px;
+  width: 88px;
+}
 
 .box {
   position: relative;
-  // width: 50%;
   margin: 0 auto;
   height: auto;
   max-height: 70vh;
-  // margin-top: calc(100vh - 85vh - 20px);
   background: #f8fafd;
   border-radius: 4px;
   padding: 20px;
-  // border: 1px solid #999;
   box-shadow: 0 10px 20px #e0e0e0;
   overflow: hidden;
 }

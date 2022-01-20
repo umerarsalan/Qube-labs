@@ -381,7 +381,7 @@ export default function Staking() {
                         <div className="col w-8 h-8 m-1 flex items-center bg-white rounded-lg">
                           <img alt="..." src={car8} />
                         </div>
-                        <div className="col px-2">
+                        <div className="col px-2 text">
                           <div className="head-text">Avalanche (AVAX)</div>
                           <div className="font-bold text-2xl">15.00%</div>
                         </div>

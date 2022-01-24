@@ -76,7 +76,7 @@ setTimeout(() => {settooltipText(false) }, 1000);
   }
 
   return (
-    <section id="staking" className="">
+    <section id="staking" className="mt-24">
         {isOpen && (
       <div className={"sticky top-0 justify-center z-40"}>
           <Popup
@@ -86,7 +86,7 @@ setTimeout(() => {settooltipText(false) }, 1000);
                   <div className="container">
                     <div className="row d-flex justify-content-center">
                       <h1>{isOpentest}</h1>
-                      <div className="col-12 col-md-6">
+                      <div className="col-12 col-md-4">
                         <div class="media custom-object d-flex">
                           <img alt="..." src={car1} className="img-object" />
                           <div class="media-body">

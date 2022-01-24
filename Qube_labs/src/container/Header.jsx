@@ -86,7 +86,7 @@ export default function Header() {
                 <img alt="..." src={ast3} />
               </div>
             </div>
-            <div className="btn is-primary">Dashboard</div>
+            <a className="btn is-primary"  href="#staking">Stake With Us</a>
           </div>
         </Collapse>
       </Navbar>

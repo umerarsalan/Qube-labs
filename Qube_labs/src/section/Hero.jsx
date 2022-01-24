@@ -133,7 +133,7 @@ export default function Hero() {
             </p>
           </ScrollReveal>
           <ScrollReveal config={anim.animate11}>
-            <button className="btn is-primary mt-4">Learn more</button>
+            <a className="btn is-primary mt-4"  href="#features" >Learn more</a>
           </ScrollReveal>
         </div>
         <div className="col relative w-6/12 hidden md:block">

@@ -6,7 +6,7 @@ const Popup = (props) => {
   return (
     <div className={"popup-box -custom flex items-center justify-center "  + (props.handleCloseValue ? ' bg-slate-200 bg-opacity-60 backdrop-blur-sm' : '')} >
       <Animated animationIn="flipInX" animationOut="flipOutY" isVisible={props.handleCloseValue}>
-        <div className="box modal-skew-from-left border-black-100">
+        <div className="box  modal-skew-from-left border-black-100">
           <span className="close-icon pt-3" onClick={props.handleClose} >
             {/* <i class="fa fa-times"></i> */}
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 21 21">

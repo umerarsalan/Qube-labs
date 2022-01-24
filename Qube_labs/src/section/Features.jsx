@@ -8,8 +8,8 @@ import ScrollReveal, { anim } from "../container/ScrollReveal";
 
 export default function Features() {
   return (
-    <section id="features" className="mt-24-custom overflow-x-clip">
-      <div className="container-xxl relative">
+    <section id="features" className="mt-24-custom z-40 overflow-x-clip">
+      <div className="container-xxl relative" style={{zIndex:"30"}}>
         {/* <img
           className="features-transition absolute top-0 right-10 -z-10 w-96 transform"
           src={featuresbg}
@@ -49,8 +49,8 @@ export default function Features() {
             fill="#fe7d1e"
           />
         </svg>
-        <div className="pt-36">
-          <div className="rounded-2xl bg-slate-200 bg-opacity-60 backdrop-blur-sm px-4 pb-4 pt-16 md:p-16">
+        <div className="pt-36 ">
+          <div className="rounded-2xl bg-slate-200 bg-opacity-60 backdrop-blur-sm backdrop-blur-sm px-4 pb-4 pt-16 md:p-16">
             <div className="text-center">
               <ScrollReveal config={anim.animate5}>
                 <h5 className="text-5xl font-bold text-primary">Work with us</h5>

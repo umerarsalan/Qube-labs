@@ -151,7 +151,7 @@ display: block;
   text-decoration: underline;
 }
 .qustion-img {
-  padding-top: 12px;
+  padding-top: 29px;
   color: #1092b2;
   cursor: pointer;
 }
@@ -168,7 +168,7 @@ display: block;
 .qustion-img img {
   width: 5%;
   margin-right: 3px;
-  margin-top: 3px;
+  margin-top: 0px;
   height: 5%;
 }
 .steke-model-btn {
@@ -258,6 +258,7 @@ display: block;
   padding: 20px;
   box-shadow: 0 10px 20px #e0e0e0;
   overflow: hidden;
+  width: 1000px;
 }
 .ppp {
   margin-top: 15px;
@@ -321,7 +322,9 @@ display: block;
   border-style: solid;
   border-color: black transparent transparent transparent;
 }
-
+#features {
+  
+}
 
 // ===popup :end===
 // ===text-card===

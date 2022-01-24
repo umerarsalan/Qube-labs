@@ -113,13 +113,13 @@ display: block;
   margin-left: 7px;
 }
 .p-card {
-  font-size: 12px;
-  padding-top: 7px;
+  font-size: 0.875rem;
+  padding-top: 4px;
   display: flex;
   cursor: pointer;
 }
 .card-headnig h4 {
-  margin-right: 12px;
+  margin-right: 0.875rem;
 }
 .card-headnig img {
   width: 13px;
@@ -133,18 +133,18 @@ display: block;
   text-decoration: underline;
 }
 .row-wrapper {
-  margin-top: 34px;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
+  margin-top: 54px;
 }
 .card-headnig {
   color: #02293e;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .p-card-link {
   color: #1092b2;
   font-size: 500;
-  font-size: 12px;
+  font-size: 0.875rem;
   margin-top: 4px;
   margin-bottom: 5px;
   font-family: "Montserrat", sans-serif;
@@ -156,7 +156,7 @@ display: block;
   cursor: pointer;
 }
 .qustion-img span {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Montserrat", sans-serif;
   color: #81c1e1;
   margin-left: 1px;
@@ -181,23 +181,23 @@ display: block;
   padding: 6px 6px;
   border-radius: 10px;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
 }
 .steke-sm-btn-none {
   display: block;
 }
 .fantom-card1 {
-  font-size: 20px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #1092b2;
 }
 .fantom-card2 {
-  font-size: 23px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #fe7d1e;
 }
 .fantom-card {
-  font-size: 23px;
+  font-size: 1.625rem;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
 }
@@ -251,14 +251,15 @@ display: block;
 .box {
   position: relative;
   margin: 0 auto;
-  height: auto;
-  max-height: 70vh;
+  // height: calc(20vw - 3px);
+  // max-height: 170vh;
   background: #f8fafd;
   border-radius: 4px;
   padding: 20px;
   box-shadow: 0 10px 20px #e0e0e0;
   overflow: hidden;
-  width: 1000px;
+  width: calc(80vw - 43px);
+  // max-width: calc(100vh - 143px);
 }
 .ppp {
   margin-top: 15px;
@@ -308,7 +309,7 @@ display: block;
   position: absolute;
   z-index: 1;
   bottom: 150%;
-  left: 38%;
+  left: 25%;
   margin-left: -60px;
 }
 
@@ -354,6 +355,7 @@ display: block;
   }
   .box {
     width: 90%;
+    height: auto;
   }
   .steke-sm-btn-none {
     display: none;

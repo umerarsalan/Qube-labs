@@ -57,7 +57,7 @@ export default function Features() {
               </ScrollReveal>
               <ScrollReveal config={anim.animate6}>
                 <p className="text-primary-dark font-medium mt-6 mb-12">
-                  Here are some reasons why you will make the best decision by choosing us.
+                By working with us you
                 </p>
               </ScrollReveal>
             </div>

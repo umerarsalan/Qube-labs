@@ -122,14 +122,12 @@ export default function Hero() {
         <div className="col relative w-full md:w-6/12">
           <ScrollReveal config={anim.animate5}>
             <h1 className="text-6xl font-bold leading-[1.2]">
-              <span className="text-primary">Qube</span> partners with high-potential blockchain
-              projects.
+              <span className="text-primary">Qubelabs</span> partners with high-potential blockchain projects.
             </h1>
           </ScrollReveal>
           <ScrollReveal config={anim.animate7}>
             <p className="mt-6 text-sm">
-              Professional investors, blockchain strategists and social-media influencers, investing
-              in a decentralized future.
+            Your trusted partner for blockchain consultancy and validating services of Web 3.0 Ecosystem. We are passionate about building communities from the ground up by providing both technical and marketing support to projects we work with.
             </p>
           </ScrollReveal>
           <ScrollReveal config={anim.animate11}>

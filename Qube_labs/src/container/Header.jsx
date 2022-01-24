@@ -38,7 +38,7 @@ export default function Header() {
                 className="inline-block text-primary-dark text-center px-4 font-medium"
                 href="#features"
               >
-                Features
+                Services
               </NavLink>
             </NavItem>
             <NavItem>
@@ -46,7 +46,7 @@ export default function Header() {
                 className="inline-block text-primary-dark text-center px-4 font-medium"
                 href="#staking"
               >
-                Staking
+                Networks
               </NavLink>
             </NavItem>
             <NavItem>

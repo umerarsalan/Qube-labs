@@ -2,9 +2,11 @@ import React, { useRef, useState, useEffect } from "react";
 import Popup from "./CustomPopup";
 
 // import car111 from "../assets/ast/car111.jpg";
-import car1 from "../assets/ast/car1.png";
+// import car1 from "../assets/ast/car1.png";
+import car1 from "../assets/ast/axelar.jpg";
 import car2 from "../assets/ast/car2.png";
-import car3 from "../assets/ast/car3.png";
+import car3 from "../assets/ast/coin.png";
+// import car3 from "../assets/ast/car3.png";
 import car4 from "../assets/ast/car4.png";
 import car5 from "../assets/ast/car5.png";
 import car6 from "../assets/ast/car6.png";
@@ -17,9 +19,21 @@ import questionCircle from "../assets/question-circle.png";
 import { anim, ScrollReveal } from "../container/ScrollReveal";
 
 export default function Staking() {
+  const [isOpen, setIsOpen] = useState(false);
+gi  const [CartValue, setCartValue] = useState(0);
   const [ViewCards, setViewCards] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [tooltipText, settooltipText] = useState("");
+  const [modalContent, setModalContent] = useState(
+    [
+      {name:"Axelar Network", urlLiks:car1, percentCount:"7.50%"},
+      {name:"Evomas", urlLiks:car2, percentCount:"10.00%"},
+      {name:"Egoric", urlLiks:car3, percentCount:"12.00%"},
+      {name:"Axelar Network", urlLiks:car4, percentCount:"15.00%"},
+      
+  ]
+  );
+  
   const count = useRef(0);
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -36,16 +50,17 @@ export default function Staking() {
     setIsOpen(false);
   }
   // ==popup==
-  const [isOpen, setIsOpen] = useState(false);
   const [isOpentest, setIsOpentest] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
   const textAreaRef = useRef(null);
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
-  const togglePopupStake = () => {
+  const togglePopupStake = (inputValue) => {
     setIsOpen(true);
-    // setIsOpentest(true);
+    console.log(inputValue);
+    setCartValue(inputValue);
+        // setIsOpentest(true);
     console.log(isOpentest);
     console.log(isOpen);
   };
@@ -67,12 +82,12 @@ export default function Staking() {
   function TestFun() {
     setIsOpen(false);
   }
- const handleMouseIn = () => {
-//     this.setState({ hover: true })
+ const handleMouseInClick = () => {
+
 navigator.clipboard.writeText("certikvaloper1hdutpn340l29gwl3nyrkxwfdyu8q96zwpyxamn");
-//  alert("Copied to clipboard.")
 settooltipText(true);
 setTimeout(() => {settooltipText(false) }, 1000);
+
   }
 
   return (
@@ -84,17 +99,18 @@ setTimeout(() => {settooltipText(false) }, 1000);
               <>
                 <div classs="container  p-5">
                   <div className="container">
-                    <div className="row d-flex justify-content-center">
-                      <h1>{isOpentest}</h1>
-                      <div className="col-12 col-md-4">
-                        <div class="media custom-object d-flex">
-                          <img alt="..." src={car1} className="img-object" />
+                    <div className=" d-flex justify-content-center">
+                      
+                    
+                        <div class="media ml-5 custom-object d-flex">
+                          <img alt="..." src={modalContent[CartValue]?.urlLiks} className="img-object" />
                           <div class="media-body">
-                            <h4 className="fantom-card">Fantom (FTM)</h4>
+                            <h4 className="fantom-card">{modalContent[CartValue]?.name}</h4>
+                            {/* <h4 className="fantom-card">Fantom (FTM)</h4> */}
                             <a href="https://fantom.foundation" target="_blank" className="p-card">
                               https://fantom.foundation <img src={externallink} alt="" />
                             </a>
-                          </div>
+                        
                         </div>
 
                         {/* <div className="fantom-modal-header">
@@ -118,10 +134,10 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       {/* <div class="tooltip">Hover over me
                       <span class="tooltiptext">Tooltip text</span>
                     </div> */}
-                        <div className="card-headnig tooltip" onClick={handleMouseIn}>
+                        <div  className="card-headnig tooltip" >
                         
                         {tooltipText ?   <span class="tooltiptext"> Text Copied ! </span> : "" }
-                             <h4>Operator Address</h4> <img src={contentCapy} alt="" /> 
+                             <h4>Operator Address</h4> <img onClick={handleMouseInClick} src={contentCapy} alt="" /> 
                         </div>
                         <p
                           className="p-card-link"
@@ -142,12 +158,13 @@ setTimeout(() => {settooltipText(false) }, 1000);
                             <div className="">
                               <div className="rate-card">
                                 <h3 className="card-headnig">Annual Reward Rate</h3>
-                                <p className="fantom-card1">15.00%</p>
+                                {/* <p className="fantom-card1">15.00%</p> */}
+                                <p className="fantom-card1">{modalContent[CartValue]?.percentCount}</p>
                               </div>
                             </div>
                           </div>
                           <div className="col-4">
-                            <div className="d-flex justify-content-start">
+                            <div className="d-flex justify-content-">
                               <div className="rate-card ">
                                 <h3 className="card-headnig">Fees</h3>
                                 <p className="fantom-card2">5.00%</p>
@@ -195,6 +212,8 @@ setTimeout(() => {settooltipText(false) }, 1000);
             handleClose={togglePopupStakeClose}
             handleCloseValue={isOpen}
             handleCloseTest={isOpentest}
+            // handleContent={modalContent[0]}
+
      
           />
       </div>
@@ -226,8 +245,10 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       <div className="row justify-center">
                         <img alt="..." src={car1} className="img111" />
                         <div className="">
-                          <div className="head-text">Fantom (FTM)</div>
-                          <div className="font-bold font-bold-card">15.00%</div>
+                      
+ 
+                          <div className="head-text">Axelar Network</div>
+                          <div className="font-bold font-bold-card">7.50%</div>
                         </div>
                       </div>
                     </div>
@@ -235,7 +256,7 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       className="btn is-primary w-full mt-2 btn-top"
                       type="button"
                       value="Click to Open Popup"
-                      onClick={togglePopupStake}
+                      onClick={ () => togglePopupStake(0)}
                     >
                       Stake 
                     </button>
@@ -249,8 +270,9 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       <div className="row justify-center">
                         <img alt="..." src={car2} className="img111" />
                         <div className="">
-                          <div className="head-text">Polkadot (DOT)</div>
-                          <div className="font-bold font-bold-card">15.00%</div>
+
+                          <div className="head-text">Evomas</div>
+                          <div className="font-bold font-bold-card">10.00%</div>
                         </div>
                       </div>
                     </div>
@@ -258,7 +280,7 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       className="btn is-primary w-full mt-2 btn-top"
                       type="button"
                       value="Click to Open Popup"
-                      onClick={togglePopup}
+                      onClick={ () => togglePopupStake(1)}
                     >
                       Stake
                     </button>
@@ -272,8 +294,8 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       <div className="row justify-center">
                         <img alt="..." src={car3} className="img111" />
                         <div className="">
-                          <div className="head-text">Terra (LUNA)</div>
-                          <div className="font-bold font-bold-card">15.00%</div>
+                          <div className="head-text">Agoric</div>
+                          <div className="font-bold font-bold-card">12.00%</div>
                         </div>
                       </div>
                     </div>
@@ -281,7 +303,7 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       className="btn is-primary w-full mt-2 btn-top"
                       type="button"
                       value="Click to Open Popup"
-                      onClick={togglePopup}
+                      onClick={ () => togglePopupStake(2)}
                     >
                       Stake
                     </button>
@@ -295,7 +317,7 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       <div className="row justify-center">
                         <img alt="..." src={car4} className="img111" />
                         <div className="">
-                          <div className="head-text">Cosmos (ATOM)</div>
+                          <div className="head-text">Fantom (FTM)</div>
                           <div className="font-bold font-bold-card">15.00%</div>
                         </div>
                       </div>
@@ -304,7 +326,7 @@ setTimeout(() => {settooltipText(false) }, 1000);
                       className="btn is-primary w-full mt-2 btn-top"
                       type="button"
                       value="Click to Open Popup"
-                      onClick={togglePopup}
+                      onClick={ () => togglePopupStake(3)}
                     >
                       Stake
                     </button>
